@@ -1,4 +1,4 @@
-package com.example.FriendGift.Friend;
+package com.example.FriendGift.friend;
 
 import java.time.LocalDate;
 import java.util.*;

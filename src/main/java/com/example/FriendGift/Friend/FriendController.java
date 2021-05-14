@@ -1,4 +1,4 @@
-package com.example.FriendGift.Friend;
+package com.example.FriendGift.friend;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
