@@ -1,8 +1,5 @@
 package com.example.FriendGift.friend;
 
-import java.time.LocalDate;
-import java.util.*;
-
 public class Friend {
 
 	private long id;
