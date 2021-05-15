@@ -1,15 +1,49 @@
 package com.example.FriendGift.friend;
 
-public class Friend {
+import java.time.LocalDate;
+import java.util.*;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import com.example.FriendGift.gift.Gift;
+
+@Entity
+@Table
+public class Friend{
+
+	@SequenceGenerator(
+			name  = "friend_sequence",
+			sequenceName = "friend_sequence",
+			allocationSize = 1
+	)
+	@GeneratedValue(
+			strategy = GenerationType.SEQUENCE,
+			generator = "friend_sequence"
+	)
+	@Id
 	private long id;
 	private String firstName;
 	private String lastName;
-	private String birthday;
+	private LocalDate birthday;
 	
-	public Friend(long id, String firstName, String lastName, String birthday) {
-		super();
+	//private List<Gift> gifts;
+	
+	public Friend() {
+	}
+	
+	public Friend(long id, String firstName, String lastName, LocalDate birthday) {
 		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.birthday = birthday;
+	}
+	
+	public Friend(String firstName, String lastName, LocalDate birthday) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthday = birthday;
@@ -39,11 +73,11 @@ public class Friend {
 		this.lastName = lastName;
 	}
 
-	public String getBirthday() {
+	public LocalDate getBirthday() {
 		return birthday;
 	}
 
-	public void setBirthday(String birthday) {
+	public void setBirthday(LocalDate birthday) {
 		this.birthday = birthday;
 	}
 	
