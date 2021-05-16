@@ -16,12 +16,14 @@ public class FriendConfig {
 			Friend brian = new Friend(
 					"Brian",
 					"Jackson",
+					"brianjackson1224@gmail.com",
 					LocalDate.of(1998, 9, 8)
 			);
 		
 			Friend vince = new Friend(
 					"Vince",
 					"Mejia",
+					"vincemej.123@gmail.com",
 					LocalDate.of(1999, 6, 10)
 			);
 			
